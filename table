@@ -1,0 +1,39 @@
+CREATE TABLE cancer_genes (
+	gene_id SERIAL PRIMARY KEY,
+	gene_name VARCHAR(50),
+	chromosome INT,
+	start_position INT,
+	end_position INT,
+	gene_type VARCHAR(50),
+	associated_cancer VARCHAR(250)
+);
+
+ALTER TABLE cancer_genes
+DROP COLUMN start_position;
+
+ALTER TABLE cancer_genes
+DROP COLUMN end_position;
+
+INSERT INTO cancer_genes (gene_name, chromosome, gene_type, associated_cancer)
+VALUES ('BRCA1', '17', 'tumor suppressor', 'breast, ovarian'),
+	   ('BRCA2', '13', 'tumor suppressor', 'breast, ovarian'),
+	   ('TP53', '17', 'tumor suppressor', 'breast, bone, leukemia, sarcomas');
+	   
+	   
+INSERT INTO cancer_genes (gene_name, chromosome, gene_type, associated_cancer)
+VALUES ('APC', '5', 'tumor suppressor', 'Familial adenomatous polyposis (FAP)'),
+       ('ATM', '11', 'kinase', 'Ataxia-telangiectasia syndrome (A-T)'),
+	   ('BAP1', '3', 'Deubiquitinase', 'Uveal Melanoma / Ocular Melanoma, malignant mesothelioma, cutaneous melanoma, basal cell carcinoma, atypical Spitz tumors, renal cell carcinoma'),
+	   ('BARD1', '2', 'tumor suppressor', 'breast, ovarian'),
+	   ('BMPR1A', '10', 'receptor', 'juvenile polyposis syndrome (JPS)'),
+	   ('BRIP1', '17', 'helicase', 'breast, ovarian'),
+	   ('CDH1', '17', 'cell adhesion molecule', 'hereditary diffuse gastric cancer (HDGC)'),
+	   ('CDKN2A', '9', 'tumor suppressor', 'melanoma, pancreatic'),
+	   ('CHEK2', '22', 'kinase', 'breast, prostate'),
+	   ('EPCAM', '2', '', 'lynch syndrome'),
+	   ('FANCM', '14', 'DNA repair', 'breast, ovarian'),
+	   ('HOXB13', '17', 'transcription factor', 'prostate'),
+	   ('MAX', '14', 'transcription factor', 'prostate'),
+	   ('MEN1', '11', 'transcription regulator', 'multiple endocrine neoplasia type 1'),
+	   ('MET', '7', 'receptor', 'papillary renal carcinoma, liver, head, neck'),
+	   ('MLH1', '3', 'DNA repair', 'lynch syndrome');
