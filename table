@@ -37,3 +37,9 @@ VALUES ('APC', '5', 'tumor suppressor', 'Familial adenomatous polyposis (FAP)'),
 	   ('MEN1', '11', 'transcription regulator', 'multiple endocrine neoplasia type 1'),
 	   ('MET', '7', 'receptor', 'papillary renal carcinoma, liver, head, neck'),
 	   ('MLH1', '3', 'DNA repair', 'lynch syndrome');
+
+
+INSERT INTO cancer_genes (gene_name, chromosome, gene_type, associated_cancer)
+VALUES ('MSH2', '2', 'DNA repair', 'colorectal, endometrial, ovarian, stomach, small intestine, liver, gallbladder duct, upper urinary tract, brain');
+
+
